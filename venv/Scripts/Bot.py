@@ -1,12 +1,13 @@
 """
 Script contains a bot that systematically screenshots all the cases.
 Author: Bram Löbker
-Version: 1.0.0 (07-14-2021)
+Version: 1.1.0 (14-06-2021)
 """
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import pyautogui
 import time
+import os
 
 
 def main():
@@ -40,6 +41,10 @@ def main():
         myScreenshot = pyautogui.screenshot()
         case=driver.find_element_by_id('current_case').text
         print(case)
+        try:
+            os.makedirs("Dataset/Compleet")
+        except FileExistsError:
+            print("Directory already exists")
         path="Dataset\\Compleet\\"+case+".png"
         myScreenshot.save(path)
 
