@@ -4,8 +4,8 @@ import os
 
 def compare(gene_name):
     """
-
-    :param gene_name:
+    Compares the difference in count data of a single gene between "normal solid tissue" and "primary tumor".
+    :param gene_name: Name of the gene.
     """
     count_tumor = []
     count_normal = []
@@ -27,9 +27,9 @@ def compare(gene_name):
 
 def calc_comparison(list_tumor, list_normal):
     """
-
-    :param list_tumor:
-    :param list_normal:
+    Calculates the difference based on count data within "normal solid tissue" and "primary tumor".
+    :param list_tumor: List of count data from a gene in "primary tumor".
+    :param list_normal:List of count data from a gene in "normal solid tissue".
     """
     higher = []
     lower = []
@@ -49,9 +49,9 @@ def calc_comparison(list_tumor, list_normal):
 
 def compare_two_genes(gene_of_interest, gene_name):
     """
-
-    :param gene_of_interest:
-    :param gene_name:
+    Compares the difference in count data of two genes between "normal solid tissue" and "primary tumor".
+    :param gene_of_interest: Gene name of interest.
+    :param gene_name: Second gene name.
     """
     count_interest_tumor = []
     count_tumor = []
@@ -79,11 +79,11 @@ def compare_two_genes(gene_of_interest, gene_name):
 
 def calc_comparison_two_genes(list_interest_tumor, list_tumor, list_interest_normal, list_normal):
     """
-
-    :param list_interest_tumor:
-    :param list_tumor:
-    :param list_interest_normal:
-    :param list_normal:
+    Calculates the difference based on count data within "normal solid tissue" and "primary tumor".
+    :param list_interest_tumor: Count data of gene of interest in the "primary tumor".
+    :param list_tumor:Count data of the second gene in the "primary tumor".
+    :param list_interest_normal: Count data of gene of interest in the "normal solid tissue".
+    :param list_normal: Count data of the second gene in the "normal solid tissue".
     """
     higher = []
     lower = []
