@@ -25,7 +25,7 @@ pip install -r requirements.txt
 1. Make a directory like seen in 'Sample_sheet' in the folder 'Data'. This has the following structure:
 .  
 ├── Data  
-│   ├── <Sample name>  
+│   ├── < Sample name >  
 │   │    ├── Input  
 │   │    └── Ouput  
 │   │    └── cases_extracted  
