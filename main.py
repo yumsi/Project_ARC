@@ -22,18 +22,16 @@ def main():
     print("Parsing gdc sample sheet")
     d_sample_sheet = extract.parse_sample_sheet(DATA_PATH)
 
-    cool = False
-    if cool:
-        if os.path.isfile(os.path.join(SELECTION_PATH, 'gene_list.csv')):
-            combine_data(d_sample_sheet, PATIENT_DATA_PATH)
-            data_normalisation(OUTPUT_DATA_PATH)
-            colour_values(OUTPUT_DATA_PATH)
-        else:
-            print("Retrieving ensembl IDs and gene names of selected genes. This may take a few minutes.")
-            convert_gene_to_ensembl(SELECTION_PATH)
-            combine_data(d_sample_sheet, PATIENT_DATA_PATH)
+    if os.path.isfile(os.path.join(SELECTION_PATH, 'gene_list.csv')):
+        combine_data(d_sample_sheet, PATIENT_DATA_PATH)
+        data_normalisation(OUTPUT_DATA_PATH)
+        colour_values(OUTPUT_DATA_PATH)
+    else:
+        print("Retrieving ensembl IDs and gene names of selected genes. This may take a few minutes.")
+        convert_gene_to_ensembl(SELECTION_PATH)
+        combine_data(d_sample_sheet, PATIENT_DATA_PATH)
 
-    list_gene_names('data/gene selection/gene_list.csv')
+# list_gene_names('data/gene selection/gene_list.csv')
 
 
 def combine_data(dictionary, path):
