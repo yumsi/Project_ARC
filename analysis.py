@@ -13,7 +13,8 @@ import read_json
 
 
 def main():
-    folder = 'lung_cancer_all'
+    # This variable should contain the name of the folder (inside /Data/) you want to use during the analysis.
+    folder = 'Sample_directory'
 
     print('Starting:\tExtracting files, normalizing on all.')
     count_ribosomal_expression.main(folder)
