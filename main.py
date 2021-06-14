@@ -13,7 +13,7 @@ OUTPUT_DATA_PATH = 'data/output'
 
 def main():
     """
-
+    Main function to execute the STRING Network.
     """
     print("Unzipping GDC download")
     extract.unzip(DATA_PATH)
@@ -36,9 +36,9 @@ def main():
 
 def combine_data(dictionary, path):
     """
-
-    :param dictionary:
-    :param path:
+    Combines the sample sheet data with the patient data.
+    :param dictionary: Dictionary of the sample sheet.
+    :param path: Path to file.
     """
     read_d = dictionary
     for key in read_d:
@@ -54,8 +54,8 @@ def combine_data(dictionary, path):
 
 def data_normalisation(path):
     """
-
-    :param path:
+    Normalises the count data.
+    :param path: path to file.
     """
     file_name = 'combined_data_no_normalization.json'
     file_path = os.path.join(path, file_name)
@@ -74,9 +74,9 @@ def data_normalisation(path):
 
 def sum_counts(d):
     """
-
-    :param d:
-    :return:
+    Returns the total sum of count data.
+    :param d: Dictionary with count data.
+    :return: The sum of the count data.
     """
     sum_count = sum(int(summarize['count']) for summarize in d)
     return sum_count
@@ -84,10 +84,10 @@ def sum_counts(d):
 
 def read_expression_data(case, path):
     """
-
-    :param case:
-    :param path:
-    :return:
+    Retrieves the expression data from selected genes within a case ID.
+    :param case: Case or Patient ID.
+    :param path: Path to file.
+    :return: Returns the expression data of of the provided gene list.
     """
     combined_expression = []
     os.chdir(os.path.join(path, case))
@@ -109,8 +109,8 @@ def read_expression_data(case, path):
 
 def convert_gene_to_ensembl(file):
     """
-
-    :param file:
+    Converts gene name or Uniprot ID to ensembl ID.
+    :param file: Path to text file with the list of gene names or uniprot IDs.
     """
     file = os.path.join(file, "eiwitten.txt")
     gene_ensembl_d = {}
@@ -131,8 +131,8 @@ def convert_gene_to_ensembl(file):
 
 def colour_values(path):
     """
-
-    :rtype: object
+    Changes the value of count data to a hex colour and export it as .json.
+    :rtype: object.
     """
     file_name = 'combined_data_normalized.json'
     file_path = os.path.join(path, file_name)
@@ -155,9 +155,9 @@ def colour_values(path):
 
 def max_value(list_data):
     """
-
-    :param list_data:
-    :return:
+    Returns the maximum value of a list.
+    :param list_data: List of count data.
+    :return: Maximum value.
     """
     max_v = max(list_data)
     return max_v
@@ -165,9 +165,9 @@ def max_value(list_data):
 
 def min_value(list_data):
     """
-
-    :param list_data:
-    :return:
+    Returns the maximum value of a list.
+    :param list_data: List of count data.
+    :return: Minimum value.
     """
     min_v = min(list_data)
     return min_v
@@ -175,11 +175,11 @@ def min_value(list_data):
 
 def convert_to_rgb(min_value, max_value, value):
     """
-
-    :param min_value:
-    :param max_value:
-    :param value:
-    :return:
+    Converts float values to a hex colour based on the value within the range of a minimum and maximum value.
+    :param min_value: Minimum value of count data.
+    :param max_value: Maximum value of count data.
+    :param value: Float value of the count data.
+    :return: Hex colour.
     """
     value = 0.67 - 0.67 * (value - min_value) / (max_value - min_value)
     R = abs(value * 6 - 3) - 1
@@ -193,10 +193,10 @@ def convert_to_rgb(min_value, max_value, value):
 
 def append_value(dict_obj, key, value):
     """
-
-    :param dict_obj:
-    :param key:
-    :param value:
+    Appends key value pairs to a dictionary.
+    :param dict_obj: Dictionary object.
+    :param key: Key value.
+    :param value: Value.
     """
     if key in dict_obj:
         if not isinstance(dict_obj[key], list):
@@ -208,9 +208,9 @@ def append_value(dict_obj, key, value):
 
 def to_list(file):
     """
-
-    :param file:
-    :return:
+    Turns the content of a file into list.
+    :param file: Target file.
+    :return: List of values.
     """
     with open(file) as f:
         content = f.readlines()
@@ -220,8 +220,8 @@ def to_list(file):
 
 def list_gene_names(file):
     """
-
-    :param file:
+    Retrieves all gene names of a gene/ensembl csv file.
+    :param file: Path to file.
     """
     with open(file, 'r') as f:
         gene_names = []
