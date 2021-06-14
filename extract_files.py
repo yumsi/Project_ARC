@@ -6,8 +6,8 @@ import csv
 
 def unzip_patient_data(directory):
     """
-
-    :param directory:
+    Unzips a patient data. Removes zip files after unzipping.
+    :param directory: Directory of patient data.
     """
     extension = ".gz"
     os.chdir(directory)
@@ -32,8 +32,8 @@ def unzip_patient_data(directory):
 
 def unzip(directory):
     """
-
-    :param directory:
+    Unzips .tar.gz files.
+    :param directory: Directory of .tar.gz file.
     """
     extension = ".tar.gz"
     extract_dir = 'cases'
@@ -49,9 +49,9 @@ def unzip(directory):
 
 def parse_sample_sheet(directory):
     """
-
-    :param directory:
-    :return:
+    Reads the sample sheet and returns a dictionary of case id, lung type and file id.
+    :param directory: Directory of the sample sheet.
+    :return: Dictionary of the parse sheet.
     """
     extension = ".tsv"
     os.chdir(directory)
