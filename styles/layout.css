@@ -1,0 +1,53 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    font-family: Arial, serif;
+    color: #122e4d;
+    background: #cedded;
+}
+
+input {
+    border: 4px solid #122e4d;
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #122e4d;
+}
+
+#stringEmbedded{
+    float: left;
+}
+#stringEmbedded2{
+    float: right;
+}
+#left-side{
+    float: left;
+}
+
+#right-side{
+    float: right;
+}
+
+.boxing {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.leveling {
+    padding: 10px;
+    float: left;
+    width: 50%;
+}

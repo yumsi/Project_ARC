@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/layout.css">
+    <script type="text/javascript" src="https://string-db.org/javascript/combined_embedded_network_v2.0.2.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<!-- HTML CODE -->
+
+<body onload='send_request_to_string()'>
+<center>
+    <h1>Project ARC</h1>
+    <h3>Select case:</h3>
+    <label for="dynamic-select">Case </label>
+    <select name="dynamic-select" id="dynamic-select">
+    </select>
+    <button onclick="insert_value();">Submit</button>
+    <h3>Network:</h3>
+
+        <div class="leveling" id="left-side">
+            <h3>Default</h3>
+        </div>
+           <div class="leveling" id="right-side">
+            <h3>Default</h3>
+        </div>
+        <div class="leveling" id="stringEmbedded">
+        </div>
+
+        <div class="leveling" id="stringEmbedded2">
+        </div>
+</center>
+</body>
+</html>
