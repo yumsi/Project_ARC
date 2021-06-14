@@ -95,40 +95,6 @@ async function color_network(selected) {
 // Sentry reports of STRING
 //
 
-function read_csv() {
-    $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "data/gene selection/gene_list.csv",
-            dataType: "text",
-            success: function (data) {
-                get_gene_list(data)
-            }
-        });
-    });
-}
-
-function get_gene_list() {
-    $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "data/gene selection/gene_list.csv",
-            dataType: "text",
-            success: function (data) {
-                const gene_list = [];
-                let lines = data.split("\n")
-                for (let l = 1; l < data.length; l++) {
-                    let cols = lines[l].split("\t")[0];
-                    gene_list.push(cols);
-                    console.log(cols);
-                }
-                console.log(gene_list)
-            }
-        });
-    });
-
-}
-
 var for_each_node = function (array, callback, scope) {
     "use strict";
 
