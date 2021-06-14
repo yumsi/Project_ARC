@@ -1,3 +1,8 @@
+//
+// function color_network(selected)
+//
+// Reads JSON files and returns the object.
+//
 function read_json() {
     return fetch("./data/output/color_assignment_normalized.json")
         .then(function (resp) {
@@ -8,6 +13,11 @@ function read_json() {
         });
 }
 
+//
+// function retrieve_selected_cases()
+//
+// Retrieves the case IDs.
+//
 async function retrieve_selected_cases() {
     const data = await (read_json())
     console.log(data)
@@ -18,6 +28,11 @@ async function retrieve_selected_cases() {
     fill_selection_cases(cases)
 }
 
+//
+// function color_network(selected)
+//
+// Fills the selection options within the stringdb.html with the case IDs.
+//
 function fill_selection_cases(cases) {
     const data = cases;
     $(document).ready(function () {
@@ -27,13 +42,22 @@ function fill_selection_cases(cases) {
     })
 }
 
-
+//
+// function insert_value()
+//
+// Retrieves the selected option of case ID.
+//
 function insert_value() {
     const select = document.getElementById("dynamic-select");
     const selected = select.options[select.selectedIndex].value
     color_network(selected)
 }
 
+//
+// function color_network(selected)
+//
+// Changes the colour value of every gene of the selected case ID within the two protein-protein interaction networks.
+//
 async function color_network(selected) {
     const data = await (read_json());
     for (const [key, value] of Object.entries(data)) {
