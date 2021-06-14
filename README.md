@@ -35,7 +35,7 @@ python main.py
 
 Step 4. Run ``Stringdb.html`` to visualize the STRING Network.
 
-## Authors
+## Author
 
 * **Julian Lerrick** - *Initial work* - [JulSL](https://github.com/JulSL)
 
