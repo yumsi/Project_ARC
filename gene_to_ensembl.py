@@ -6,11 +6,11 @@ TOOL_ENDPOINT = '/uploadlists/'
 
 def map_retrieve(ids2map, source_fmt='ACC+ID', target_fmt='ACC', output_fmt='list'):
     """
-
-    :param ids2map:
-    :param source_fmt:
-    :param target_fmt:
-    :param output_fmt:
+    Converts identifiers into other identifiers based on set parameters. Uses Uniprot as data source.
+    :param ids2map: Identifiers for mapping.
+    :param source_fmt: Format of source.
+    :param target_fmt: Format of target.
+    :param output_fmt: Output format.
     :return:
     """
     if hasattr(ids2map, 'pop'):
@@ -28,10 +28,10 @@ def map_retrieve(ids2map, source_fmt='ACC+ID', target_fmt='ACC', output_fmt='lis
 
 def convert_ID(id, type):
     """
-
-    :param id:
-    :param type:
-    :return:
+    Converts individual identifiers to other identifiers using the map_retrieve function.
+    :param id: Source identifier type.
+    :param type: Target identifier type.
+    :return: Returns identifier.
     """
     if type == "ensembl":
         ensembl = map_retrieve(id.strip().split(), target_fmt='ENSEMBL_ID').split("\n")[0]
