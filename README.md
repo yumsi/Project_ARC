@@ -37,6 +37,6 @@ Installation requirements
 4. Leave it running for 10 minutes, depending on the dataset size (3 seconds per case, 195*3 ~ 600 = 10 minutes)
     Note: The bot takes screenshots, you cannot do anything else while running the bot, as it will block the chromedriver window.
 
-## Author
+## Authors
 
 * **Bram lobker & Harm Laurense**
