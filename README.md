@@ -13,7 +13,9 @@ Instructions to get started using the STRING Network
 
 Installation requirements
 
-1. Dataset downloaded from the GDC Data Portal (https://portal.gdc.cancer.gov/)
+1. Python 3+
+2. Dataset containing count data + samplesheet downloaded from the GDC Data Portal (https://portal.gdc.cancer.gov/). The samplesheet should contain 1 tumor and 1 normal entry from every case.
+
 
 ### How to run
 
