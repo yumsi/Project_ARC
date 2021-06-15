@@ -13,7 +13,9 @@ Instructions to get started using the STRING Network
 
 Installation requirements
 
-1. Dataset downloaded from the GDC Data Portal (https://portal.gdc.cancer.gov/)
+1. Python 3+
+2. Dataset containing count data + samplesheet downloaded from the GDC Data Portal (https://portal.gdc.cancer.gov/). The samplesheet should contain 1 tumor and 1 normal entry from every case.
+
 
 ### How to run
 
@@ -25,7 +27,17 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-Step 2. Place the downloaded .tar.gz dataset in the main directory.
+Step 2. Place the downloaded .tar.gz dataset in the 'main' directory. Place the downloaded samplesheet in the 'data' folder. Place your gene names in the 'gene selection' folder.
+```
+
+├── Main folder
+│ ├── Data
+│ │ ├── Cases
+│ │ └── Gene selection <--- Add your gene name list here as "eiwitten.txt"
+│ │ └── output
+│ │  <--- Add your sample sheet here.
+│   <--- Add your downloaded TCGA dataset here.
+```
 
 Step 3. Run ``main.py`` to preprocess the dataset to be used by the STRING Network.
 
