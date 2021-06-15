@@ -43,7 +43,7 @@ Step 2. Use the script found in the *DataPreprocessing_ViolinPlots_Excel* branch
 Step 3. Run ``main.py`` to start the webapp. The app is initiated with a random case, but can be changed with the dropdown menu in the top left.
 
 
-## Author
+## Authors
 
 * **Bram Löbker** - *Coding work* - [bramlobker](https://github.com/bramlobker)
 
