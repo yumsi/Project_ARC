@@ -5,7 +5,7 @@
 ## About
 
 The Grid-Bot is a tool that works in conjunction with the Ribosome Visualizer. It makes grids of all the 16 available visualisations.
-It also saves the images individually, to allow for different styles of analisys.
+It also saves the images individually, to allow for different styles of analysis.
 
 ## Getting Started
 
