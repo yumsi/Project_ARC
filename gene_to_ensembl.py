@@ -1,3 +1,12 @@
+"""
+@version: 1.1.0 (14-06-2021)
+
+@author: Julian Lerrick
+
+Converts identifiers to another format of identifier.
+
+"""
+
 import requests as request
 
 BASE = 'http://uniprot.org'

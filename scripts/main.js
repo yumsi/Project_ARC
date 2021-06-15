@@ -1,4 +1,15 @@
 //
+// @version: 1.1.0 (14-06-2021)
+//
+// @author: Julian Lerrick
+//
+// Added functions to the STRING API to map gene expression data.
+//
+//
+
+
+
+//
 // function color_network(selected)
 //
 // Reads JSON files and returns the object.

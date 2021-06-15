@@ -1,3 +1,12 @@
+"""
+@version: 1.1.0 (14-06-2021)
+
+@author: Julian Lerrick
+
+Main function to call the other processing functions.
+
+"""
+
 import json
 import extract_files as extract
 import gene_to_ensembl as convert

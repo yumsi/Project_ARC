@@ -1,3 +1,12 @@
+"""
+@version: 1.1.0 (14-06-2021)
+
+@author: Julian Lerrick
+
+Extracts, removes and unzips files.
+
+"""
+
 import os
 import shutil
 import gzip

@@ -1,3 +1,12 @@
+"""
+@version: 1.1.0 (14-06-2021)
+
+@author: Julian Lerrick
+
+Compares count data based on (a) gene name(s) between normal solid tissue and primary tumor.
+
+"""
+
 import json
 import os
 
