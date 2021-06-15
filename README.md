@@ -1,4 +1,4 @@
-# STRING Network
+# Ribosome Visualizer
 
 ## About
 
